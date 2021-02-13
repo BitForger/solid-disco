@@ -4,7 +4,7 @@ local filePath = 'var/db.json'
 local function find_modem()
     local sides = {"top", "front", "back", "left", "right", "bottom"}
     for _, side in pairs(sides) do
-        if peripheral.isPresent(side) and peripheral.getType() == "modem" then
+        if peripheral.isPresent(side) then
             -- Find first peripheral, wrap it, and break out
             modem = peripheral.wrap(side)
             break
