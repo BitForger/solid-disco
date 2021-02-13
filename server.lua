@@ -33,9 +33,7 @@ local function startup(  )
     modem.open(52);
     while true do
         local cmd = read()
-        if cmd == 'alarm' then
-            modem.transmit(52, 52, 'alarm')
-        end
+        modem.transmit(52, 52, cmd)
     end
 end
 
