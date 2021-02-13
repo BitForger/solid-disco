@@ -29,7 +29,6 @@ local function startup()
         local event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
         if message == "alarm" then
             activate_alarms()
-            break
         end
         if message == 'stop' then
             stop_alarms()
