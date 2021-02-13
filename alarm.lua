@@ -24,6 +24,7 @@ local function stop_alarms(  )
 end
 
 local function startup()
+    find_modem()
     modem.open(52)
     while true do
         local event, side, channel, replyChannel, message, distance = os.pullEvent("modem_message")
