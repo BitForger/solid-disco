@@ -33,6 +33,9 @@ local function startup(  )
     modem.open(52);
     while true do
         local cmd = read()
+        if cmd == 'exit' then
+            return
+        end
         modem.transmit(52, 52, cmd)
     end
 end
